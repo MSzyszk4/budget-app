@@ -1,0 +1,107 @@
+@import "../../../main-style";
+
+.root {
+  display: flex;
+  width: 100%;
+  position: relative;
+
+  &:hover {
+    .x-icon-button {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .x-icon-button {
+    position: absolute;
+    height: 34px;
+    width: 34px;
+
+    border-radius: 100%;
+
+    background-color: $dark;
+
+    right: -15px;
+    top: -15px;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform: scale(0);
+    transition: opacity 0.2s ease-in, transform 0.2s ease-in;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+  }
+
+
+
+}
+
+.budget-item {
+  display: flex;
+  width: 100%;
+  background-color: $light-grey;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color 0.2s ease-in;
+
+  &:hover {
+    background-color: darken($light-grey, 12%);
+  }
+
+  .description {
+    display: flex;
+
+    flex-grow: 1;
+    font-size: 18px;
+    margin-left: 5px;
+
+    align-items: center;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .amount {
+    padding: 5px;
+    border-radius: 3px;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+
+}
+
+.expense {
+  p {
+    color: $red;
+  }
+
+  .amount {
+    background-color: $light-red;
+  }
+}
+
+.income {
+  p {
+    color: $green;
+  }
+
+  .amount {
+    background-color: $light-green;
+  }
+}
